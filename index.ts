@@ -5,17 +5,17 @@ import { Alchemy, Network } from 'alchemy-sdk';
 import { BigNumberish, constants } from 'ethers';
 
 const alchemySettings = {
-  apiKey: 'demo', // Replace with your Alchemy API Key.
-  network: Network.ETH_MAINNET, // Replace with your network.
+  apiKey: 'BWxGkTpkGcXipsQ4FC8M1EC9uXBWD7nM', // Replace with your Alchemy API Key.
+  network: Network.MONAD_TESTNET, // Replace with your network.
 };
 
 const alchemy = new Alchemy(alchemySettings);
 
 // Instantiate thirdweb SDK
-const sdk = new ThirdwebSDK('ethereum');
+const sdk = new ThirdwebSDK('monad');
 
-const erc: 'erc721' | 'erc1155' = 'erc1155'; // Choose erc721 or erc1155
-const contractAddress = '0xa6146896d6605c1b54af5ef861d5de2de1101646'; // Replace with your contract address
+const erc: 'erc721' | 'erc1155' = 'erc721'; // Choose erc721 or erc1155
+const contractAddress = '0xEd52E0D80F4E7b295dF5e622B55EFf22D262f6ed'; // Replace with your contract address
 const tokenId = '0'; // Replace with the token ID to check the balance of (in case of ERC1155, otherwise ignore)
 
 const getBalances = async (erc: "erc721" | "erc1155") => {
